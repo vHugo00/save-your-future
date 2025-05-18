@@ -5,7 +5,7 @@ import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { toast } from '@/hooks/use-toast';
-import { Eye, EyeOff, LogIn, Google } from 'lucide-react';
+import { Eye, EyeOff, LogIn, Mail } from 'lucide-react';
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
@@ -127,7 +127,7 @@ const Login: React.FC = () => {
             className="w-full"
             onClick={handleGoogleLogin}
           >
-            <Google className="mr-2 h-5 w-5" /> Entrar com Google
+            <Mail className="mr-2 h-5 w-5" /> Entrar com Google
           </Button>
           
           <p className="text-sm text-bank-text-secondary text-center mt-6">
