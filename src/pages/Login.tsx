@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { toast } from '@/hooks/use-toast';
 import { Eye, EyeOff, LogIn, Mail } from 'lucide-react';
-import logo from "../images/logo-login.jpeg";
+import logo from "../images/logo-1.jpeg";
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
@@ -125,7 +125,6 @@ const Login: React.FC = () => {
             type="button"
             variant="outline"
             className="w-full"
-            onClick={handleGoogleLogin}
           >
             <Mail className="mr-2 h-5 w-5" /> Entrar com Google
           </Button>
