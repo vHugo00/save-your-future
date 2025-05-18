@@ -13,10 +13,10 @@ const Profile: React.FC = () => {
           <Avatar className="h-20 w-20 mx-auto mb-3">
             <AvatarFallback className="bg-bank-blue-light text-white text-xl">JD</AvatarFallback>
           </Avatar>
-          <h1 className="text-2xl font-bold mb-1">João da Silva</h1>
-          <p className="opacity-90">joao.silva@email.com</p>
+          <h1 className="text-2xl font-bold mb-1">Vitor Hugo</h1>
+          <p className="opacity-90">vitor.h@email.com</p>
         </div>
-        
+
         <main className="px-4 -mt-5">
           <Card className="mb-5">
             <CardHeader>
@@ -39,7 +39,7 @@ const Profile: React.FC = () => {
               </div>
             </CardContent>
           </Card>
-          
+
           <Card>
             <CardHeader>
               <CardTitle className="text-lg font-medium">Configurações</CardTitle>
@@ -61,7 +61,7 @@ const Profile: React.FC = () => {
             </CardContent>
           </Card>
         </main>
-        
+
         <BottomNavigation />
       </div>
     </div>
