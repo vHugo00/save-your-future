@@ -45,7 +45,7 @@ const Goals: React.FC = () => {
     <div className="min-h-screen bg-bank-off-white pb-20">
       <div className="max-w-md mx-auto">
         <Header />
-        
+
         <main className="px-4">
           <div className="flex justify-between items-center mb-5">
             <h2 className="text-2xl font-bold text-bank-text-primary">Minhas metas</h2>
@@ -53,7 +53,7 @@ const Goals: React.FC = () => {
               <PlusIcon className="h-5 w-5 mr-2" /> Nova meta
             </Button>
           </div>
-          
+
           <div className="space-y-4">
             {goals.map((goal) => (
               <Card key={goal.id}>
@@ -74,7 +74,7 @@ const Goals: React.FC = () => {
             ))}
           </div>
         </main>
-        
+
         <BottomNavigation />
       </div>
     </div>

@@ -11,7 +11,14 @@ const Profile: React.FC = () => {
       <div className="max-w-md mx-auto">
         <div className="bg-bank-blue text-white py-10 px-4 text-center rounded-b-3xl">
           <Avatar className="h-20 w-20 mx-auto mb-3">
-            <AvatarFallback className="bg-bank-blue-light text-white text-xl">JD</AvatarFallback>
+            <AvatarFallback className="bg-bank-blue-light text-white text-xl">
+              <img
+                src="https://avatars.githubusercontent.com/u/104032346?v=4"
+                alt="Logo"
+                className=" rounded-full object-cover"
+              />
+            </AvatarFallback>
+
           </Avatar>
           <h1 className="text-2xl font-bold mb-1">Vitor Hugo</h1>
           <p className="opacity-90">vitor.h@email.com</p>

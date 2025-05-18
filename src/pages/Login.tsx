@@ -6,26 +6,27 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { toast } from '@/hooks/use-toast';
 import { Eye, EyeOff, LogIn, Mail } from 'lucide-react';
+import logo from "../images/logo-login.jpeg";
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [showPassword, setShowPassword] = useState<boolean>(false);
-  
+
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Check fixed credentials
     if (email === 'admin@gmail.com' && password === '124qweqwe123') {
       // Set logged in status in localStorage
       localStorage.setItem('isLoggedIn', 'true');
-      
+
       toast({
         title: "Login bem-sucedido",
         description: "Bem-vindo de volta!",
       });
-      
+
       navigate('/');
     } else {
       toast({
@@ -35,9 +36,8 @@ const Login: React.FC = () => {
       });
     }
   };
-  
+
   const handleGoogleLogin = () => {
-    // Simulate Google login for demo purposes
     localStorage.setItem('isLoggedIn', 'true');
     toast({
       title: "Login com Google",
@@ -51,11 +51,11 @@ const Login: React.FC = () => {
       <Card className="w-full max-w-md">
         <CardHeader className="items-center pt-10 pb-8">
           <div className="w-full flex flex-col items-center mb-8">
-            <div className="h-20 w-20 bg-bank-green rounded-full flex items-center justify-center mb-4">
-              <img 
-                src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=400&h=400&fit=crop" 
-                alt="Logo" 
-                className="h-16 w-16 rounded-full object-cover"
+            <div className="h-20 w-20  flex items-center justify-center mb-4">
+              <img
+                src={logo}
+                alt="Logo"
+                className="h-16 w-16  object-cover"
               />
             </div>
             <h1 className="text-2xl font-bold text-center text-bank-text-primary">
@@ -82,7 +82,7 @@ const Login: React.FC = () => {
                 required
               />
             </div>
-            
+
             <div className="space-y-2">
               <label htmlFor="password" className="text-sm font-medium">
                 Senha
@@ -96,8 +96,8 @@ const Login: React.FC = () => {
                   placeholder="••••••••"
                   required
                 />
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-bank-text-secondary"
                   onClick={() => setShowPassword(!showPassword)}
                 >
@@ -105,7 +105,7 @@ const Login: React.FC = () => {
                 </button>
               </div>
             </div>
-            
+
             <Button type="submit" className="w-full bg-bank-green hover:bg-bank-green-light mt-6">
               <LogIn className="mr-2 h-5 w-5" /> Entrar
             </Button>
@@ -120,16 +120,16 @@ const Login: React.FC = () => {
               <span className="bg-white px-4 text-sm text-bank-text-secondary">ou</span>
             </div>
           </div>
-          
-          <Button 
-            type="button" 
-            variant="outline" 
+
+          <Button
+            type="button"
+            variant="outline"
             className="w-full"
             onClick={handleGoogleLogin}
           >
             <Mail className="mr-2 h-5 w-5" /> Entrar com Google
           </Button>
-          
+
           <p className="text-sm text-bank-text-secondary text-center mt-6">
             Guarde seus centavos automaticamente e veja seu dinheiro crescer.
           </p>
