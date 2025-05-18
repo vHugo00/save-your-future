@@ -1,11 +1,26 @@
-// Update this page (the content is just a fallback if you fail to update the page)
 
-const Index = () => {
+import React from 'react';
+import Header from '@/components/Header';
+import BalanceCard from '@/components/BalanceCard';
+import YieldCard from '@/components/YieldCard';
+import ActionButtons from '@/components/ActionButtons';
+import TransactionHistory from '@/components/TransactionHistory';
+import BottomNavigation from '@/components/BottomNavigation';
+
+const Index: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-bank-off-white pb-20">
+      <div className="max-w-md mx-auto">
+        <Header />
+        
+        <main className="px-4">
+          <BalanceCard />
+          <YieldCard />
+          <ActionButtons />
+          <TransactionHistory />
+        </main>
+        
+        <BottomNavigation />
       </div>
     </div>
   );
