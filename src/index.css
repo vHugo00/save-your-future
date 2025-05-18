@@ -49,18 +49,18 @@
 
 @layer components {
   .card {
-    @apply bg-white rounded-xl shadow-md p-6;
+    @apply bg-white rounded-xl shadow-md p-6 my-6;
   }
   
   .balance-card {
-    @apply bg-bank-blue text-white rounded-xl shadow-md p-6;
+    @apply bg-bank-blue text-white rounded-xl shadow-md p-6 my-6;
   }
   
   .yield-card {
-    @apply bg-bank-green text-white rounded-xl shadow-md p-6;
+    @apply bg-bank-green text-white rounded-xl shadow-md p-6 my-6;
   }
   
   .transaction {
-    @apply flex justify-between items-center py-3 border-b border-gray-100;
+    @apply flex justify-between items-center py-4 border-b border-gray-100;
   }
 }

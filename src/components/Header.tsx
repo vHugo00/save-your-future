@@ -8,11 +8,11 @@ const Header: React.FC = () => {
     <header className="flex justify-between items-center py-6 px-4">
       <div className="flex items-center">
         <Avatar className="h-10 w-10">
-          <AvatarFallback className="bg-bank-blue text-white">JD</AvatarFallback>
+          <AvatarFallback className="bg-bank-blue text-white">VH</AvatarFallback>
         </Avatar>
         <div className="ml-3">
           <h2 className="text-sm font-medium text-bank-text-secondary">Olá,</h2>
-          <h1 className="text-lg font-semibold text-bank-text-primary">João</h1>
+          <h1 className="text-lg font-semibold text-bank-text-primary">Vitor Hugo</h1>
         </div>
       </div>
       <div className="flex gap-4">

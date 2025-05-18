@@ -8,7 +8,7 @@ const BalanceCard: React.FC = () => {
   return (
     <div className="balance-card mb-5">
       <div className="flex justify-between items-center mb-3">
-        <h2 className="text-lg font-medium opacity-90">Saldo disponível</h2>
+        <h2 className="text-lg font-medium opacity-90">Você já guardou</h2>
         <button 
           onClick={() => setShowBalance(!showBalance)}
           className="text-white opacity-90 hover:opacity-100"
@@ -21,7 +21,7 @@ const BalanceCard: React.FC = () => {
           {showBalance ? "R$ 1.254,65" : "R$ •••••••"}
         </p>
       </div>
-      <p className="text-sm opacity-90">Última atualização: hoje às 10:35</p>
+      <p className="text-sm opacity-90">Boa! Você está cada vez mais perto do seu sonho.</p>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ChartBarIcon } from 'lucide-react';
+import { FileText } from 'lucide-react';
 
 interface Transaction {
   id: number;
@@ -47,8 +47,8 @@ const TransactionHistory: React.FC = () => {
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between pb-2">
-        <CardTitle className="text-lg font-medium">Histórico de arredondamentos</CardTitle>
-        <ChartBarIcon className="h-5 w-5 text-bank-text-secondary" />
+        <CardTitle className="text-lg font-medium">Histórico de trocos guardados</CardTitle>
+        <FileText className="h-5 w-5 text-bank-text-secondary" />
       </CardHeader>
       <CardContent className="pt-0">
         {transactions.map((transaction) => (
