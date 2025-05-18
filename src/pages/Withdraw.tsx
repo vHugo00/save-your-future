@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { ArrowUp } from 'lucide-react';
+import { ArrowUp, Calendar, Info } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Header from '@/components/Header';
@@ -78,6 +78,18 @@ const Withdraw: React.FC = () => {
         <Header />
         
         <main className="px-4">
+          {/* Aviso sobre período de 30 dias */}
+          <Card className="mb-4 border-l-4 border-amber-500">
+            <CardContent className="pt-4">
+              <div className="flex items-start">
+                <Info className="h-5 w-5 text-amber-500 mr-2 mt-0.5 flex-shrink-0" />
+                <p className="text-sm text-bank-text-secondary">
+                  <span className="font-medium text-amber-600">Importante:</span> O resgate só é possível após 30 dias da data de depósito dos valores. Isso garante o melhor rendimento para o seu dinheiro.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+          
           <Card className="mb-5">
             <CardHeader className="flex flex-row items-center justify-between pb-2">
               <CardTitle className="text-lg font-medium">Pegar meu dinheiro</CardTitle>

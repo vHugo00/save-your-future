@@ -1,28 +1,40 @@
 
 import React from 'react';
-import { BellIcon, Settings } from 'lucide-react';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { useNavigate } from 'react-router-dom';
+import { LogOut } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { toast } from '@/hooks/use-toast';
 
 const Header: React.FC = () => {
+  const navigate = useNavigate();
+  
+  const handleLogout = () => {
+    localStorage.removeItem('isLoggedIn');
+    toast({
+      title: "Logout realizado",
+      description: "Você saiu da sua conta.",
+    });
+    navigate('/login');
+  };
+  
   return (
-    <header className="flex justify-between items-center py-6 px-4">
+    <header className="py-5 px-4 flex items-center justify-between">
       <div className="flex items-center">
-        <Avatar className="h-10 w-10">
-          <AvatarFallback className="bg-bank-blue text-white">VH</AvatarFallback>
-        </Avatar>
-        <div className="ml-3">
-          <h2 className="text-sm font-medium text-bank-text-secondary">Olá,</h2>
-          <h1 className="text-lg font-semibold text-bank-text-primary">Vitor Hugo</h1>
+        <div className="h-10 w-10 bg-bank-green rounded-full flex items-center justify-center mr-3">
+          <img 
+            src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=400&h=400&fit=crop" 
+            alt="Logo" 
+            className="h-8 w-8 rounded-full object-cover"
+          />
+        </div>
+        <div>
+          <h1 className="font-bold text-md text-bank-text-primary">SAVE YOUR FUTURE</h1>
+          <p className="text-xs text-bank-text-secondary">Economize para o amanhã</p>
         </div>
       </div>
-      <div className="flex gap-4">
-        <button className="text-bank-text-secondary rounded-full p-2 hover:bg-gray-100">
-          <BellIcon className="h-6 w-6" />
-        </button>
-        <button className="text-bank-text-secondary rounded-full p-2 hover:bg-gray-100">
-          <Settings className="h-6 w-6" />
-        </button>
-      </div>
+      <Button variant="ghost" size="icon" onClick={handleLogout}>
+        <LogOut className="h-5 w-5 text-bank-text-secondary" />
+      </Button>
     </header>
   );
 };

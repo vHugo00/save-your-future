@@ -1,8 +1,11 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import AuthRoute from "./components/AuthRoute";
+import Login from "./pages/Login";
 import Index from "./pages/Index";
 import YieldDetails from "./pages/YieldDetails";
 import Statement from "./pages/Statement";
@@ -20,12 +23,55 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/yield" element={<YieldDetails />} />
-          <Route path="/statement" element={<Statement />} />
-          <Route path="/withdraw" element={<Withdraw />} />
-          <Route path="/goals" element={<Goals />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/login" element={<Login />} />
+          <Route
+            path="/"
+            element={
+              <AuthRoute>
+                <Index />
+              </AuthRoute>
+            }
+          />
+          <Route
+            path="/yield"
+            element={
+              <AuthRoute>
+                <YieldDetails />
+              </AuthRoute>
+            }
+          />
+          <Route
+            path="/statement"
+            element={
+              <AuthRoute>
+                <Statement />
+              </AuthRoute>
+            }
+          />
+          <Route
+            path="/withdraw"
+            element={
+              <AuthRoute>
+                <Withdraw />
+              </AuthRoute>
+            }
+          />
+          <Route
+            path="/goals"
+            element={
+              <AuthRoute>
+                <Goals />
+              </AuthRoute>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <AuthRoute>
+                <Profile />
+              </AuthRoute>
+            }
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
