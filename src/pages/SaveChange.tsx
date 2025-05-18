@@ -2,11 +2,11 @@
 import React, { useState } from 'react';
 import Header from '@/components/Header';
 import BottomNavigation from '@/components/BottomNavigation';
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { PiggyBank, Plus } from 'lucide-react';
+import { PiggyBank } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { useNavigate } from 'react-router-dom';
 
@@ -26,12 +26,8 @@ const SaveChange: React.FC = () => {
       return;
     }
 
-    toast({
-      title: "Sucesso!",
-      description: `R$ ${amount} guardado com sucesso.`,
-    });
-
-    navigate('/');
+    // Navigate to the QR code payment page with the amount
+    navigate(`/payment-qr/${amount}`);
   };
 
   return (
@@ -66,29 +62,10 @@ const SaveChange: React.FC = () => {
                 </div>
                 
                 <Button type="submit" className="w-full bg-bank-green hover:bg-bank-green-light">
-                  <PiggyBank className="mr-2 h-5 w-5" /> Guardar Valor
+                  <PiggyBank className="mr-2 h-5 w-5" /> Prosseguir para Pagamento
                 </Button>
               </form>
             </CardContent>
-            <CardFooter className="flex-col space-y-4">
-              <div className="w-full pt-4 border-t">
-                <h3 className="font-medium mb-2">Opções de economia automática:</h3>
-                <div className="space-y-3">
-                  <Button variant="outline" className="w-full justify-between">
-                    Arredondar compras para R$ 1
-                    <Plus size={16} />
-                  </Button>
-                  <Button variant="outline" className="w-full justify-between">
-                    Guardar 5% do salário
-                    <Plus size={16} />
-                  </Button>
-                  <Button variant="outline" className="w-full justify-between">
-                    Guardar R$ 10 semanalmente
-                    <Plus size={16} />
-                  </Button>
-                </div>
-              </div>
-            </CardFooter>
           </Card>
         </main>
         

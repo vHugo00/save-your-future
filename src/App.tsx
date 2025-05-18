@@ -14,6 +14,8 @@ import Goals from "./pages/Goals";
 import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
 import SaveChange from "./pages/SaveChange";
+import PaymentQR from "./pages/PaymentQR";
+import UnderDevelopment from "./pages/UnderDevelopment";
 
 const queryClient = new QueryClient();
 
@@ -78,6 +80,22 @@ const App = () => (
             element={
               <AuthRoute>
                 <SaveChange />
+              </AuthRoute>
+            }
+          />
+          <Route
+            path="/payment-qr/:amount"
+            element={
+              <AuthRoute>
+                <PaymentQR />
+              </AuthRoute>
+            }
+          />
+          <Route
+            path="/under-development"
+            element={
+              <AuthRoute>
+                <UnderDevelopment />
               </AuthRoute>
             }
           />

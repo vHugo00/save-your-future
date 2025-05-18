@@ -4,6 +4,7 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import BottomNavigation from '@/components/BottomNavigation';
 import { ChevronRightIcon } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Profile: React.FC = () => {
   return (
@@ -60,10 +61,12 @@ const Profile: React.FC = () => {
                 "Ajuda e Suporte",
                 "Termos e Políticas"
               ].map((item, index) => (
-                <div key={index} className="flex justify-between items-center py-3 px-6 border-b last:border-b-0">
-                  <span className="font-medium">{item}</span>
-                  <ChevronRightIcon className="h-5 w-5 text-bank-text-secondary" />
-                </div>
+                <Link key={index} to="/under-development">
+                  <div className="flex justify-between items-center py-3 px-6 border-b last:border-b-0 hover:bg-gray-50">
+                    <span className="font-medium">{item}</span>
+                    <ChevronRightIcon className="h-5 w-5 text-bank-text-secondary" />
+                  </div>
+                </Link>
               ))}
             </CardContent>
           </Card>
