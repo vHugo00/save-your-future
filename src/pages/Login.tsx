@@ -10,8 +10,8 @@ import logo from "../images/logo-login.jpeg";
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
-  const [email, setEmail] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
+  const [email, setEmail] = useState<string>('admin@gmail.com');
+  const [password, setPassword] = useState<string>('124qweqwe123');
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
   const handleLogin = (e: React.FormEvent) => {

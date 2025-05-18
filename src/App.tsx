@@ -13,6 +13,7 @@ import Withdraw from "./pages/Withdraw";
 import Goals from "./pages/Goals";
 import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
+import SaveChange from "./pages/SaveChange";
 
 const queryClient = new QueryClient();
 
@@ -69,6 +70,14 @@ const App = () => (
             element={
               <AuthRoute>
                 <Profile />
+              </AuthRoute>
+            }
+          />
+          <Route
+            path="/save-change"
+            element={
+              <AuthRoute>
+                <SaveChange />
               </AuthRoute>
             }
           />
