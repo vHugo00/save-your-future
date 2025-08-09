@@ -54,33 +54,11 @@ Outras libs para otimização da UI e UX:
 **Próximos passos:**  
 Evoluir para uma plataforma completa, com autenticação real, conexão com bancos e automação financeira.
 
----
-
-## 💻 Como Rodar Localmente
-
-1. Clone o repositório:
-```bash
-git clone https://github.com/seu-usuario/seu-repo.git
-```
-
-2. Acesse a pasta do projeto:
-```bash
-cd nome-do-projeto
-```
-
-3. Instale as dependências:
-```bash
-npm install
-```
-
-4. Rode o projeto:
-```bash
-npm run dev
-```
 
 5. Acesse no navegador:
 ```bash
 http://localhost:5173
 ```
 *(ou a porta que o Vite indicar)*
+
 
